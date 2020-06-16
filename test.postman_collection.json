@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "329ced82-f1da-47c1-90d8-4d483be3f400",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "B站查询基础接口 Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0855cd90-bfa7-4f64-b974-a17edb5fd3c0",
+						"exec": [
+							"console.log(pm.info.request)"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b2dbc24-e3a8-4c17-abc5-fe82f11bc4d4",
+						"exec": [
+							"console.log(pm.info.request)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMyNzdhNThmZWI0ZmZlYTFlN2I1Yzc1YWViYTJhNGVlNWIxYjZlZjZlNjQ3N2ZiZDAwNzE0ZjMwNDE4YWVkNDg2NWJiZjMxMTQ2MmZmNTU4In0.eyJhdWQiOiI3MiIsImp0aSI6IjMyNzdhNThmZWI0ZmZlYTFlN2I1Yzc1YWViYTJhNGVlNWIxYjZlZjZlNjQ3N2ZiZDAwNzE0ZjMwNDE4YWVkNDg2NWJiZjMxMTQ2MmZmNTU4IiwiaWF0IjoxNTkyMDU4ODA3LCJuYmYiOjE1OTIwNTg4MDcsImV4cCI6MTU5MjA2NjAwNywic3ViIjoiNTQiLCJzY29wZXMiOlsiYmFzaWMiXX0.mGWgs74H20UzHCjghxWORNjXu8f5m1N4pWLUo5qHqH6OfDam5JBonOltL4kxqbZbCP22OC59wYqXnqGKj0wUclrQ7dNntRRmBDHkkFC_frttXfMCUorRqcR4gLSNWjhX1eWTc6sBv3SmS-MenWBl0N8QSjYAUvEsiLbjcLm71NUVt831Bcl9o-c_KLK1x-mP-dHFFsOAaHnsLY0neUf3iFPK0wAwI6Nuyzjg5WqL98ae8bBJC8acOSi7Z_x9FqHt0dgj89JMv1kK-HacDAaMweXPhlPJI4QcQSqtyz_bUsHGaGjxcgDsczYFcsqYE6yn_KiewhEbdXUAEgHHFgu0TYiwNxSojdtK1skWlfihVzMlSf4E4YEaFWrnMYFhwCEuGmWlTBOQx-vZEAIsnindXVy-mxU9w-0pQ3PAuxE65IEhgBPkGhjAZsHh3bPia8517W7ymIJQpD5317f9SVJx7M9uPLp_UsKw-AU-DzKZBROR_8biM72nqmu5K5dzjPsGxoRnTwA-B_H1cmA-Xg_mq5NLvGQodPiSgDW0y1g8DddCUiJ_47kkWu8H6t5OKsiQkWIsq96koJF5KycPRDvHSOCE4WnKNYTQC9iqfCaLlqGrpR5fe-v45w2JY5llK-0Q7u3rDT2JCRFhgqdP_j4mz66gIazFYyIzoldSj72GUw8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://mkoldata.kolstore.com/bilibili/account/basic?uid=35461776",
+					"protocol": "http",
+					"host": [
+						"mkoldata",
+						"kolstore",
+						"com"
+					],
+					"path": [
+						"bilibili",
+						"account",
+						"basic"
+					],
+					"query": [
+						{
+							"key": "uid",
+							"value": "35461776"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
