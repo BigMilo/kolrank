@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "f3592076-7929-4585-bbc5-096d1d568b9e",
+		"name": "storm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserInfo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c940dd65-9ea1-4e2c-a8b2-54264087f749",
+						"exec": [
+							"// 判断响应等于预期值\r",
+							"pm.test(\"Body is correct\",function(){\r",
+							"    pm.response.to.have.body('{\"code\": 200, \"id\": \"1\", \"name\": \"\\\\u5c0f\\\\u660e\", \"age\": 18}')\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=1",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c940dd65-9ea1-4e2c-a8b2-54264087f749",
+						"exec": [
+							"//判断响应状态码\r",
+							"pm.test(\"Body is code\",function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"没有这个用户\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{domain}}/getuser",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c940dd65-9ea1-4e2c-a8b2-54264087f749",
+						"exec": [
+							"//判断响应状态码\r",
+							"pm.test(\"Body is code\",function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.msg).to.eql(\"没有这个用户\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://{{domain}}/getuser?userid=3",
+					"protocol": "http",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
