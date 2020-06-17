@@ -56,7 +56,7 @@
 							"//判断响应状态码\r",
 							"pm.test(\"Body is code\",function(){\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.msg).to.eql(\"没有这个用户\");\r",
+							"    pm.expect(jsonData.id).to.eql(1);\r",
 							"});"
 						],
 						"type": "text/javascript"
